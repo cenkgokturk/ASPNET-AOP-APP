@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Castle.Core/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NLog": "1.0.0.505",
+          "log4net": "1.2.10"
+        },
+        "compile": {
+          "lib/Castle.Core.dll": {},
+          "lib/Castle.Services.Logging.NLogIntegration.dll": {},
+          "lib/Castle.Services.Logging.log4netIntegration.dll": {}
+        },
+        "runtime": {
+          "lib/Castle.Core.dll": {},
+          "lib/Castle.Services.Logging.NLogIntegration.dll": {},
+          "lib/Castle.Services.Logging.log4netIntegration.dll": {}
+        }
+      },
+      "Castle.DynamicProxy/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "[1.2.0]"
+        },
+        "compile": {
+          "lib/Castle.DynamicProxy2.dll": {}
+        },
+        "runtime": {
+          "lib/Castle.DynamicProxy2.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -9,6 +38,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
+        }
+      },
+      "log4net/2.0.12": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/5.0.2": {
@@ -970,6 +1011,90 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "NLog/1.0.0.505": {
+        "type": "package",
+        "compile": {
+          "lib/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/NLog.dll": {}
+        }
+      },
+      "PostSharp/6.8.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Redist": "[6.8.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/PostSharp.props": {},
+          "build/PostSharp.targets": {}
+        }
+      },
+      "PostSharp.Patterns.Common/6.8.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp": "[6.8.8, 7.0.0)",
+          "PostSharp.Patterns.Common.Redist": "[6.8.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "PostSharp.Patterns.Common.Redist/6.8.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Redist": "[6.8.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/net5.0/PostSharp.Patterns.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/PostSharp.Patterns.Common.dll": {}
+        }
+      },
+      "PostSharp.Patterns.Diagnostics/6.8.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Patterns.Common": "[6.8.8, 7.0.0)",
+          "PostSharp.Patterns.Diagnostics.Redist": "[6.8.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "PostSharp.Patterns.Diagnostics.Redist/6.8.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Patterns.Common.Redist": "[6.8.8, 7.0.0)"
+        },
+        "compile": {
+          "lib/net5.0/PostSharp.Patterns.Diagnostics.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/PostSharp.Patterns.Diagnostics.dll": {}
+        }
+      },
+      "PostSharp.Redist/6.8.8": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/PostSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/PostSharp.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1241,7 +1366,7 @@
           "System.Security.Permissions": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
@@ -1800,7 +1925,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Security.AccessControl.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.AccessControl.dll": {}
@@ -1867,7 +1992,7 @@
           "System.Windows.Extensions": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Security.Permissions.dll": {}
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Security.Permissions.dll": {}
@@ -1876,7 +2001,7 @@
       "System.Security.Principal.Windows/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Security.Principal.Windows.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
@@ -2019,7 +2144,7 @@
           "System.Drawing.Common": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Windows.Extensions.dll": {}
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Windows.Extensions.dll": {}
@@ -2132,6 +2257,32 @@
     }
   },
   "libraries": {
+    "Castle.Core/1.2.0": {
+      "sha512": "Nzf3go+P9ZReJOWX1FVAnd2eBcF7u1sjIll2KC80B2kTmJTJY/cqvJG6kK/x/dXrPh4zmdPatnnVWZ/nrKzEaw==",
+      "type": "package",
+      "path": "castle.core/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "castle.core.1.2.0.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/Castle.Core.dll",
+        "lib/Castle.Services.Logging.NLogIntegration.dll",
+        "lib/Castle.Services.Logging.log4netIntegration.dll"
+      ]
+    },
+    "Castle.DynamicProxy/2.2.0": {
+      "sha512": "3eiJiPYF7wK0CmHn47d56kbJLfvTGfLZ8D5G1dLLRbCo8h28gn6qkKTxFk/65FDz9zeUqWWmpZ3SAwhbpOr1sw==",
+      "type": "package",
+      "path": "castle.dynamicproxy/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "castle.dynamicproxy.2.2.0.nupkg.sha512",
+        "castle.dynamicproxy.nuspec",
+        "lib/Castle.DynamicProxy2.dll"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -2146,6 +2297,34 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "log4net/2.0.12": {
+      "sha512": "9P67BCftJ7KG+B7rNOM1A9KczUwyEDed6zbAddy5Cj/73xVkzi+rEAHeOgUnW5wDqy1JFlY8+oTP0m1PgJ03Tg==",
+      "type": "package",
+      "path": "log4net/2.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/log4net.dll",
+        "lib/net20/log4net.xml",
+        "lib/net35-client/log4net.dll",
+        "lib/net35-client/log4net.xml",
+        "lib/net35/log4net.dll",
+        "lib/net35/log4net.xml",
+        "lib/net40-client/log4net.dll",
+        "lib/net40-client/log4net.xml",
+        "lib/net40/log4net.dll",
+        "lib/net40/log4net.xml",
+        "lib/net45/log4net.dll",
+        "lib/net45/log4net.xml",
+        "lib/netstandard1.3/log4net.dll",
+        "lib/netstandard1.3/log4net.xml",
+        "lib/netstandard2.0/log4net.dll",
+        "lib/netstandard2.0/log4net.xml",
+        "log4net.2.0.12.nupkg.sha512",
+        "log4net.nuspec",
+        "package-icon.png"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/5.0.2": {
@@ -3853,6 +4032,162 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.11.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "NLog/1.0.0.505": {
+      "sha512": "7dnEHYmlfAho9gbM0KvjcfSej419aevcYyDNFcQf6ALcj+ZEkns64ZAN1KOOQK0lL20WHWXbKML4aA088BENTg==",
+      "type": "package",
+      "path": "nlog/1.0.0.505",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/NLog.dll",
+        "nlog.1.0.0.505.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "PostSharp/6.8.8": {
+      "sha512": "V2sKOiqyXD3L+vEu3cHDN4pY0wQeT6sIAyzZwaHB66ieKaTxxMe/gAu7qP7UtTTx1KAoVd2IvAGhfkksNs7FBg==",
+      "type": "package",
+      "path": "postsharp/6.8.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.html",
+        "build/PostSharp-Tools.7z",
+        "build/PostSharp.BeforeTargetFrameworkInference.targets",
+        "build/PostSharp.Version.properties",
+        "build/PostSharp.properties",
+        "build/PostSharp.props",
+        "build/PostSharp.targets",
+        "build/PostSharp.tasks",
+        "build/_common/unzipper/SharpCompress.dll",
+        "build/_common/unzipper/System.Runtime.CompilerServices.Unsafe.dll",
+        "build/_common/unzipper/System.Text.Encoding.CodePages.dll",
+        "build/_common/unzipper/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "build/_common/unzipper/unzipper.deps.json",
+        "build/_common/unzipper/unzipper.dll",
+        "build/_common/unzipper/unzipper.exe",
+        "build/_common/unzipper/unzipper.exe.config",
+        "build/_common/unzipper/unzipper.pdb",
+        "build/_common/unzipper/unzipper.runtimeconfig.json",
+        "build/net472/PostSharp.MSBuild.v6.8.8.Release.dll",
+        "build/net472/PostSharp.MSBuild.v6.8.8.Release.pdb",
+        "build/netcoreapp2.1/PostSharp.MSBuild.v6.8.8.Release.dll",
+        "build/netcoreapp2.1/PostSharp.MSBuild.v6.8.8.Release.pdb",
+        "icon.png",
+        "lib/net35-client/_._",
+        "lib/netstandard1.0/_._",
+        "postsharp.6.8.8.nupkg.sha512",
+        "postsharp.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Common/6.8.8": {
+      "sha512": "ltShBf8juGlHJbS+koH69wJ6zEPxi4OLYO1L3ZpNS553KAu6/X7ZiAAL/1gN+cV6AeX498pRIQGdpc2+vGi/mA==",
+      "type": "package",
+      "path": "postsharp.patterns.common/6.8.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net40/_._",
+        "lib/netstandard1.3/_._",
+        "postsharp.patterns.common.6.8.8.nupkg.sha512",
+        "postsharp.patterns.common.nuspec",
+        "tools/PostSharp.Patterns.Common.Weaver.dll"
+      ]
+    },
+    "PostSharp.Patterns.Common.Redist/6.8.8": {
+      "sha512": "QKn+zGYuWZ1LAHFHvzQcTF3nKYogGhJWYrCpdz1Cau8tKMksGMEHG/Tyaqeetc80lS7GLhM/YMvzOXEcNrbouA==",
+      "type": "package",
+      "path": "postsharp.patterns.common.redist/6.8.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net45/PostSharp.Patterns.Common.dll",
+        "lib/net45/PostSharp.Patterns.Common.xml",
+        "lib/net46/PostSharp.Patterns.Common.dll",
+        "lib/net46/PostSharp.Patterns.Common.xml",
+        "lib/net47/PostSharp.Patterns.Common.dll",
+        "lib/net47/PostSharp.Patterns.Common.xml",
+        "lib/net5.0/PostSharp.Patterns.Common.dll",
+        "lib/net5.0/PostSharp.Patterns.Common.xml",
+        "lib/netstandard1.3/PostSharp.Patterns.Common.dll",
+        "lib/netstandard1.3/PostSharp.Patterns.Common.xml",
+        "lib/netstandard2.0/PostSharp.Patterns.Common.dll",
+        "lib/netstandard2.0/PostSharp.Patterns.Common.xml",
+        "postsharp.patterns.common.redist.6.8.8.nupkg.sha512",
+        "postsharp.patterns.common.redist.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Diagnostics/6.8.8": {
+      "sha512": "4RoMUjhNaAascQq/r8ugaTaQWr33pWaep9His3v8i2xEBzITXIPgFCxUXS9WN/hOVBFYyS7hOL8LjqNzZdRoNA==",
+      "type": "package",
+      "path": "postsharp.patterns.diagnostics/6.8.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net40/_._",
+        "lib/netstandard1.3/_._",
+        "postsharp.patterns.diagnostics.6.8.8.nupkg.sha512",
+        "postsharp.patterns.diagnostics.nuspec",
+        "tools/PostSharp.Patterns.Diagnostics.Weaver.dll"
+      ]
+    },
+    "PostSharp.Patterns.Diagnostics.Redist/6.8.8": {
+      "sha512": "QdMFMwBqmclF+q+nwwpGJohZATskM7sPQVyvpAwjT/1LA92o4+hsvFXlJ6d4yBZ8TWgVGRVdLTW2hgbHYqazLA==",
+      "type": "package",
+      "path": "postsharp.patterns.diagnostics.redist/6.8.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net45/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net45/PostSharp.Patterns.Diagnostics.xml",
+        "lib/net46/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net46/PostSharp.Patterns.Diagnostics.xml",
+        "lib/net47/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net47/PostSharp.Patterns.Diagnostics.xml",
+        "lib/net5.0/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net5.0/PostSharp.Patterns.Diagnostics.xml",
+        "lib/netstandard1.3/PostSharp.Patterns.Diagnostics.dll",
+        "lib/netstandard1.3/PostSharp.Patterns.Diagnostics.xml",
+        "lib/netstandard2.0/PostSharp.Patterns.Diagnostics.dll",
+        "lib/netstandard2.0/PostSharp.Patterns.Diagnostics.xml",
+        "postsharp.patterns.diagnostics.redist.6.8.8.nupkg.sha512",
+        "postsharp.patterns.diagnostics.redist.nuspec"
+      ]
+    },
+    "PostSharp.Redist/6.8.8": {
+      "sha512": "ujcGYLO6cI1r91NxT/GB5n/cdwgE5mkkrXInAkiFmSD2fk8/DxbAHNVO1KnuqnnvXJB+D7ByPs3ORfTpzypWLw==",
+      "type": "package",
+      "path": "postsharp.redist/6.8.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net35-client/PostSharp.dll",
+        "lib/net35-client/PostSharp.xml",
+        "lib/net45/PostSharp.dll",
+        "lib/net45/PostSharp.xml",
+        "lib/net5.0/PostSharp.dll",
+        "lib/net5.0/PostSharp.xml",
+        "lib/netstandard1.3/PostSharp.dll",
+        "lib/netstandard1.3/PostSharp.xml",
+        "lib/netstandard2.0/PostSharp.dll",
+        "lib/netstandard2.0/PostSharp.xml",
+        "postsharp.redist.6.8.8.nupkg.sha512",
+        "postsharp.redist.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -7454,11 +7789,15 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Castle.DynamicProxy >= 2.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.2",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.2",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.1",
+      "PostSharp >= 6.8.8",
+      "PostSharp.Patterns.Diagnostics >= 6.8.8",
+      "log4net >= 2.0.12"
     ]
   },
   "packageFolders": {
@@ -7500,6 +7839,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Castle.DynamicProxy": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.2, )"
@@ -7521,6 +7864,18 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[5.0.1, )"
+          },
+          "PostSharp": {
+            "target": "Package",
+            "version": "[6.8.8, )"
+          },
+          "PostSharp.Patterns.Diagnostics": {
+            "target": "Package",
+            "version": "[6.8.8, )"
+          },
+          "log4net": {
+            "target": "Package",
+            "version": "[2.0.12, )"
           }
         },
         "imports": [
@@ -7533,6 +7888,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7544,5 +7913,37 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Castle.Core 1.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Castle.Core",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Castle.DynamicProxy 2.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Castle.DynamicProxy",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NLog 1.0.0.505' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NLog",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

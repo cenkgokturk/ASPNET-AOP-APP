@@ -22,6 +22,7 @@ namespace AOPSampleApp.Areas.Identity.Pages.Account
         private readonly SignInManager<AOPUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
+        [LoggingAspect]
         public LoginModel(SignInManager<AOPUser> signInManager, 
             ILogger<LoginModel> logger,
             UserManager<AOPUser> userManager)
@@ -73,12 +74,13 @@ namespace AOPSampleApp.Areas.Identity.Pages.Account
             ReturnUrl = returnUrl;
         }
 
+        [LoggingAspect]
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-        
+
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout

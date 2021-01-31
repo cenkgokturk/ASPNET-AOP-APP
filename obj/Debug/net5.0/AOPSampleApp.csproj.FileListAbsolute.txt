@@ -5,7 +5,6 @@ C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.deps.json
 C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.runtimeconfig.json
 C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.runtimeconfig.dev.json
 C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.dll
-C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\ref\AOPSampleApp.dll
 C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.pdb
 C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.Views.dll
 C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.Views.pdb
@@ -111,7 +110,6 @@ C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\AOPSampleApp.RazorTarge
 C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\AOPSampleApp.Views.pdb
 C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\AOPSampleApp.csproj.CopyComplete
 C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\AOPSampleApp.dll
-C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\ref\AOPSampleApp.dll
 C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\AOPSampleApp.pdb
 C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\AOPSampleApp.genruntimeconfig.cache
 C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.StaticWebAssets.xml
@@ -162,3 +160,17 @@ C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\Razor\Areas\Identity\Pa
 C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_AuthLayout.cshtml.g.cs
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\log4net.dll
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.pssym
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\AOPSampleApp.pspdb
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\Castle.Services.Logging.NLogIntegration.dll
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\Castle.Services.Logging.log4netIntegration.dll
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\Castle.DynamicProxy2.dll
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\NLog.dll
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\PostSharp.dll
+C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\PostSharp\touch
+C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\PostSharp\dependencies.txt
+C:\Users\Cenk\source\repos\AOPSampleApp\obj\Debug\net5.0\PostSharp\postsharp.app.config
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\PostSharp.Patterns.Common.dll
+C:\Users\Cenk\source\repos\AOPSampleApp\bin\Debug\net5.0\PostSharp.Patterns.Diagnostics.dll

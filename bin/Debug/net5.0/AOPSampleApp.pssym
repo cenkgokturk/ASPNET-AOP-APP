@@ -1,30 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Symbols LinesOfCode="416" PostSharpLinesOfCode="0" EnhancedTypesCount="3" SchemaVersion="1" PostSharpVersion="6.8.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
-  <Evolution Source="#1=M:[AOPSampleApp]AOPSampleApp.Areas.Identity.Pages.Account.LoginModel::OnPostAsync(System.String)" Target="#2=M:[AOPSampleApp]AOPSampleApp.Areas.Identity.Pages.Account.LoginModel+&lt;OnPostAsync&gt;d__22::MoveNext()" />
-  <Class Class="#3=T:[PostSharp]PostSharp.Serialization.PSerializableAttribute">
-    <Instance Declaration="#4=T:[AOPSampleApp]AOPSampleApp.LoggingAspect" Id="125def533aa1ab35">
+<Symbols LinesOfCode="429" PostSharpLinesOfCode="0" EnhancedTypesCount="2" SchemaVersion="1" PostSharpVersion="6.8.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[PostSharp]PostSharp.Serialization.PSerializableAttribute">
+    <Instance Declaration="#2=T:[AOPSampleApp]AOPSampleApp.LoggingAspect" Id="125def539a0a020f">
       <Target />
     </Instance>
   </Class>
-  <Class Class="#4">
-    <Instance Declaration="#5=M:[AOPSampleApp]AOPSampleApp.Areas.Identity.Pages.Account.LoginModel::#ctor(Microsoft.AspNetCore.Identity.SignInManager{[AOPSampleApp]AOPSampleApp.Areas.Identity.Data.AOPUser}, Microsoft.Extensions.Logging.ILogger{[AOPSampleApp]AOPSampleApp.Areas.Identity.Pages.Account.LoginModel}, Microsoft.AspNetCore.Identity.UserManager{[AOPSampleApp]AOPSampleApp.Areas.Identity.Data.AOPUser})" Id="125def530bb8d163">
+  <Class Class="#2">
+    <Instance Declaration="#3=M:[AOPSampleApp]AOPSampleApp.Areas.Identity.Pages.Account.LoginModel::isAdmin()" Id="125def532298b8a7">
       <Target LinesAvoided="8">
-        <JoinPoint Description="#6=Wrapped by advice(s) OnEntry, OnSuccess, OnException, OnExit" Ordinal="0" />
+        <JoinPoint Description="#4=Wrapped by advice(s) OnEntry, OnSuccess, OnException, OnExit" Ordinal="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#1" Id="125def53df78c9d0">
-      <Target LinesAvoided="8" Tags="premium">
-        <JoinPoint Description="#6" />
-      </Target>
-    </Instance>
-    <Instance Declaration="#7=M:[AOPSampleApp]AOPSampleApp.Areas.Identity.Pages.Account.RegisterModel::#ctor(Microsoft.AspNetCore.Identity.UserManager{[AOPSampleApp]AOPSampleApp.Areas.Identity.Data.AOPUser}, Microsoft.AspNetCore.Identity.SignInManager{[AOPSampleApp]AOPSampleApp.Areas.Identity.Data.AOPUser}, Microsoft.Extensions.Logging.ILogger{[AOPSampleApp]AOPSampleApp.Areas.Identity.Pages.Account.RegisterModel}, Microsoft.AspNetCore.Identity.UI.Services.IEmailSender)" Id="125def532cabeabd">
+    <Instance Declaration="#5=M:[AOPSampleApp]AOPSampleApp.Areas.Identity.Pages.Account.LoginModel::whoSignIn(System.String)" Id="125def535079a15d">
       <Target LinesAvoided="8">
-        <JoinPoint Description="#6" Ordinal="2" />
+        <JoinPoint Description="#4" />
       </Target>
     </Instance>
   </Class>
-  <Annotation Target="#8=M:[AOPSampleApp]AOPSampleApp.LoggingAspect::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#9=2" Description="#10=PostSharp estimates that 2 lines of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
-  <Annotation Target="#11=M:[AOPSampleApp]AOPSampleApp.LoggingAspect::OnSuccess(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#9" Description="#10" />
-  <Annotation Target="#12=M:[AOPSampleApp]AOPSampleApp.LoggingAspect::OnExit(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#9" Description="#10" />
-  <Annotation Target="#13=M:[AOPSampleApp]AOPSampleApp.LoggingAspect::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#9" Description="#10" />
+  <Annotation Target="#6=M:[AOPSampleApp]AOPSampleApp.LoggingAspect::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#7=2" Description="#8=PostSharp estimates that 2 lines of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
+  <Annotation Target="#9=M:[AOPSampleApp]AOPSampleApp.LoggingAspect::OnSuccess(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#7" Description="#8" />
+  <Annotation Target="#10=M:[AOPSampleApp]AOPSampleApp.LoggingAspect::OnExit(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#7" Description="#8" />
+  <Annotation Target="#11=M:[AOPSampleApp]AOPSampleApp.LoggingAspect::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#7" Description="#8" />
 </Symbols>

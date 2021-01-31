@@ -33,10 +33,16 @@ namespace AOPSampleApp
     {
         public override void OnEntry(MethodExecutionArgs args)
         {
+           
+
             Console.WriteLine("The {0} method has been entered.", args.Method.Name);
-            if (args.Method.Name.Equals(".ctor"))
+            if (args.Method.Name.Equals("isAdmin"))
             {
-                Console.WriteLine("Authentication page has been opened");
+                Console.WriteLine("Logged in user was admin");
+            }else if (args.Method.Name.Equals("whoSignIn"))
+            {
+                System.Reflection.ParameterInfo[] a = args.Method.GetParameters();
+                Console.WriteLine("Logged in user was {0}", a[0].Position);
             }
         }
 

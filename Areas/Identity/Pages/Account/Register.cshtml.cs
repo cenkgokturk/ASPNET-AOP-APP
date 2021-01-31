@@ -25,7 +25,6 @@ namespace AOPSampleApp.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
-        [LoggingAspect]
         public RegisterModel(
             UserManager<AOPUser> userManager,
             SignInManager<AOPUser> signInManager,

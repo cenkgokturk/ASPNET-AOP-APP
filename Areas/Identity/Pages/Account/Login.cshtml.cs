@@ -22,7 +22,6 @@ namespace AOPSampleApp.Areas.Identity.Pages.Account
         private readonly SignInManager<AOPUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        [LoggingAspect]
         public LoginModel(SignInManager<AOPUser> signInManager, 
             ILogger<LoginModel> logger,
             UserManager<AOPUser> userManager)
@@ -75,6 +74,12 @@ namespace AOPSampleApp.Areas.Identity.Pages.Account
         }
 
         [LoggingAspect]
+        public void isAdmin(){}
+
+        [LoggingAspect]
+        public String whoSignIn(String email) { return email; }
+
+
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
@@ -86,9 +91,12 @@ namespace AOPSampleApp.Areas.Identity.Pages.Account
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                if (Input.Email.Equals("admin@gmail.com")){ isAdmin();}
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+                    whoSignIn(Input.Email);
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
